@@ -1,4 +1,4 @@
-# Kubernetes services implementation with kubeshark traffic monitoring 
+# Kubernetes services implementation with kubeshark load balancer demonstration
 
 locate your project file which contains the Dockerfile to create the image and all the dependencies listed in requirements.txt 
 
