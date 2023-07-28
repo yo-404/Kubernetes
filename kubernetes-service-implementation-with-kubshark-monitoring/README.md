@@ -159,3 +159,8 @@ curl 192.168.49.2:30007/demo
 kubectl get pods -o  wide
 ```
 here we will be able to see IPs for both the pod and in kubeshark we will be able to see the requests going to both the IPs in a round robin scheduling manner .
+
+![image](https://github.com/yo-404/Kubernetes/assets/100558220/eb9891f6-47ea-41c0-8ece-aacb7a518f25)
+
+
+
