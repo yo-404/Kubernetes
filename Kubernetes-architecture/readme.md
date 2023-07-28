@@ -24,7 +24,7 @@ also supports HPA - horizontal pod **autoscaler**
 
 ### Control Plane/Master Node 
 
-- **API server** : API server is used for communication of external world and kubernetes .External communications via command line interface (CLI) or other user interfaces (UI) pass to the kube-apiserver, and all control planes to node communications also goes through the API server.
+- **API server** : API server is used for communication of external kubernetes-service-implementation-with-kubshark0world and kubernetes .External communications via command line interface (CLI) or other user interfaces (UI) pass to the kube-apiserver, and all control planes to node communications also goes through the API server.
 
 - **Scheduler** : A scheduler watches for newly created Pods that have no Node assigned. For every Pod that the scheduler discovers, the scheduler becomes responsible for finding the best Node for that Pod to run on. 
 
