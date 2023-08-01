@@ -100,6 +100,9 @@ check if the controllers are enabled and are running using
 kubectl get pods -A | grep nginx
 ```
 
+![image](https://github.com/yo-404/Kubernetes/assets/100558220/c68033a4-2bcc-44c4-92a8-ba41401e82b2)
+
+
 adding the foo.bar.com domain in hosts list 
 ```
 sudo vi /etc/hosts
@@ -108,6 +111,10 @@ sudo vi /etc/hosts
 <ip of application> foo.bar.com
 ```
 try pinging the to foo.bar.com and it should work 
+
+![image](https://github.com/yo-404/Kubernetes/assets/100558220/ab90931b-d053-49af-88ed-36f570f56516)
+
+
 
 also curl command should also be working fine now and the application is now accessible
 
