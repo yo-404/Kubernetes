@@ -60,3 +60,27 @@ if using minikube , you can use
 ```
 minikube addons enable ingress
 ```
+check if the controllers are enabled and are running using
+
+```
+kubectl get pods -A | grep nginx
+```
+
+adding the foo.bar.com domain in hosts list 
+```
+sudo vi /etc/hosts
+```        
+```
+<ip of application> foo.bar.com
+```
+try pinging the to foo.bar.com and it should work 
+
+also curl command should also be working fine now and the application is now accessible
+
+```
+curl -L http://foo.bar.com/bar -v
+```
+
+
+
+
