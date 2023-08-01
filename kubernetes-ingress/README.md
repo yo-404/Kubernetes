@@ -20,7 +20,7 @@ Ingress can be used for applications like Nginx , F5load balancer , HAProxy etc 
 To implement Ingress , we need to add the ingress controller from the Loadbalancer service providers of our choice . In order to use it ,user must add an Ingress controller into the application which can understand the ingress resource yaml files . The user can then add his requirement as per need into the YAML file .
 
 
-## kubernetes ingress resource YAML format
+## kubernetes ingress resource YAML format for path based routing
 
 ingress.yml
 ```
@@ -40,8 +40,42 @@ spec:
             name: my-service-py-app
             port:
               number: 80
-  
+
 ```
+
+## kubernetes ingress resource YAML format for host based routing
+
+```
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-ingress
+spec:
+  rules:
+  - host: app1.example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: my-service-py-app
+            port:
+              number: 80
+  - host: app2.example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: my-service-py-app
+            port:
+              number: 80
+
+```
+
+
 ```
 kubectl apply -f ingress.yml
 ```
