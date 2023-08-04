@@ -78,3 +78,12 @@ kubectl get cm
 kubectl delete cm <cm-name>
 ```
 
+## steps for example are provided in `/example/python-web-app/README.md`
+
+### security of secret in k8s
+
+- For encrypting the secret we can also use Hashicorp vault 
+- enforcing strict RBAC policies
+- Improve etcd management policies
+- Avoid sharing Secret manifests
+- Restrict Secret access to specific containers
