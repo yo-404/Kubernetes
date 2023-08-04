@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-py-app
+  labels:
+    app: sample-py-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sample-py-app
+  template:
+    metadata:
+      labels:
+        app: sample-py-app
+    spec:
+      containers:
+      - name: py-app-sample
+        image: yogi404/python-sample-app-demo:v1
+        env:
+         - name: DB-PORT
+           valueFrom:
+            configMapKeyRef:
+             name: test-cm
+             key: db-port   
+        ports:
+        - containerPort: 8000
